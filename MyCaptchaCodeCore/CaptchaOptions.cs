@@ -77,9 +77,9 @@ namespace MyCaptchaCodeCore
             FontWarp = Level.None;
             BackgroundNoise = Level.Low;
             LineNoise = Level.Low;
-            Width = 72;
-            Height = 22;
-            TextLength = 5;
+            Width = 120;
+            Height = 36;
+            TextLength = 6;
         }
 
         #endregion

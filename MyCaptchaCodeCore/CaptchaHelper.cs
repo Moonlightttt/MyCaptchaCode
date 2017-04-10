@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
 using System.Web;
 using System.Web.Mvc;
-using System.Web.Routing;
 
 namespace MyCaptchaCodeCore
 {
@@ -28,7 +23,7 @@ namespace MyCaptchaCodeCore
             return MvcHtmlString.Create(sb.ToString());
         }
 
-        static string CreateImgTag(CaptchaOptions options)
+        private static string CreateImgTag(CaptchaOptions options)
         {
             var sb = new StringBuilder("<a href=\"javascript:void(0)\"><img src=\"");
             sb.Append("/Captcha/GetCaptchaCode");

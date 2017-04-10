@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace MyCaptchaCodeCore
+﻿namespace MyCaptchaCodeCore
 {
     public class CaptchaOptions
     {
@@ -11,24 +9,26 @@ namespace MyCaptchaCodeCore
         private int _length;
         private string _chars;
 
-        #endregion
+        #endregion 私有字段
 
         #region 公共属性
 
         /// <summary>
         /// 验证字符长度（字符个数）
         /// </summary>
-        public int TextLength {
+        public int TextLength
+        {
             get { return _length; }
-            set {_length = value < 3 ? 3 : value;}
+            set { _length = value < 3 ? 3 : value; }
         }
 
         /// <summary>
         /// 生成验证码用的字符
         /// </summary>
-        public string TextChars {
-            get {return _chars;}
-            set {_chars =(string.IsNullOrEmpty(value)||value.Trim().Length < 3) ? "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789" : value.Trim();}
+        public string TextChars
+        {
+            get { return _chars; }
+            set { _chars = (string.IsNullOrEmpty(value) || value.Trim().Length < 3) ? "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789" : value.Trim(); }
         }
 
         /// <summary>
@@ -46,14 +46,13 @@ namespace MyCaptchaCodeCore
         /// </summary>
         public Level LineNoise { get; set; }
 
-
         /// <summary>
         /// 验证码图片宽度
         /// </summary>
         public int Width
         {
             get { return _width; }
-            set{_width = value < (TextLength * 18)?TextLength*18:value;}
+            set { _width = value < (TextLength * 18) ? TextLength * 18 : value; }
         }
 
         /// <summary>
@@ -64,11 +63,11 @@ namespace MyCaptchaCodeCore
             get { return _height; }
             set
             {
-                _height = value<20?20:value;
+                _height = value < 20 ? 20 : value;
             }
         }
 
-        #endregion
+        #endregion 公共属性
 
         #region constructor
 
@@ -82,7 +81,7 @@ namespace MyCaptchaCodeCore
             TextLength = 6;
         }
 
-        #endregion
+        #endregion constructor
     }
 
     public enum Level

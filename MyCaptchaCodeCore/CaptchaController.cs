@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
 namespace MyCaptchaCodeCore
 {
-    public class CaptchaController: Controller
-    { 
+    public class CaptchaController : Controller
+    {
         /// <summary>
         /// 获取验证码
         /// </summary>
